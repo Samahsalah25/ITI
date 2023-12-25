@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add and Delete with jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{
+        background-color: rgb(15, 10, 10);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hello{
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        left: 350px;
+    }
+    .div1{
+        height: 250px;
+        background-color: rgba(45, 34, 210, 0.5);
+        width: 50%;
+        position: relative;
+        top: 170px;
+        padding: 20px;
+        border-radius: 20px;
+        
+       
+
+    }
+    input{
+        width: 320px;
+        height: 40px;
+        border: none;
+        box-shadow: 0 0 2px 2px gainsboro;
+        border-radius: 10px;
+    }
+    button{
+        border-radius: 50px;
+        background-color: green;
+        width: 120px;
+        height: 40px;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    ul{
+        position: relative;
+        top: 180px;
+        left: -640px;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        list-style: none;
+    }
+    ul li button{
+        height: 20pt;
+        width: 80px;
+        font-size: 16px;
+    }
+    ul li{
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="hello">Hello User</div>
+<div class="div1">
+  <input type="text" id="name" placeholder="enter value">
+  <button id="add">Add</button>
+</div>
+
+<ul id="ul1">
+</ul>
+
+<script>
+  $(document).ready(function(){
+  ///////add 
+    $('#add').click(function(){
+      var newItem = $('#name').val().trim();
+      if (newItem !== '') {
+        $('#ul1').append('<li>' + newItem + ' <button class="delete">Delete</button></li>');
+        $('#name').val('');
+      }
+    });
+///////delete 
+    $('#ul1').on('click', '.delete', function(){
+      $(this).closest('li').remove();
+    });
+  });
+</script>
+
+</body>
+</html>

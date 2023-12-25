@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+  
+      .map {
+        height: 70%;
+       position: relative;
+       top: 10px;
+      }
+      .map2{
+        top:80px !important;
+      }
+
+.btn1,.btn2{
+    margin-top: 10px;
+    margin-left: 120px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    font-size: 22px;
+    border: none;
+
+}
+.btn2{
+    margin-left: 700px;
+    margin-top: 20px;
+    width: 200px;
+    position: relative;
+    top: 10px;
+
+}
+  
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      table{
+        text-align: center;
+           position: relative;
+           left: 300px;
+           top: 60px;
+        width: 60%;
+        visibility: hidden;
+      }
+      thead{
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        
+      }
+      thead td{
+        width: 120px;
+        height: 40px;
+      }
+     tr td{
+        border: 1px black solid;
+        font-size: 16px;
+      }
+      .visible {
+        visibility: visible !important;
+      }
+     
+    </style>
+  </head>
+  <body>
+  
+    <button class="btn1">mymap</button>
+    <button class="btn2">InfoLocation</button>
+    <table class="table">
+        <thead ><td>latitude</td><td>longitude</td><td>Time</td></thead>
+        <tbody><tr><td class="td">Samah</td><td class="td">Salah</td><td class="td">Hussien mohamed ali hussienm ksjdksahdskahd</td></tr></tbody>
+
+    </table>
+    <div id="map" class="map"></div>
+   
+  
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+       
+    <script>
+        var td=document.querySelectorAll(".td")
+      let map;
+      var maps=document.querySelector(".map");
+      var btnMap=document.getElementsByTagName('button')[0];
+      btnMap.addEventListener('click',function(){
+        maps.classList.add("map2");
+
+        navigator.geolocation.getCurrentPosition(addlocation,function(){
+            document.write(`<h1 style="color:red;font-size:22px;margin:30px"> You need to give me permission to get you Location</h1>`)
+        });
+      })
+
+    function addlocation(e){
+        var lat=e.coords.latitude;
+        var log=e.coords.longitude
+        var time = e.timestamp || Date.now();
+        initMap(log,lat);
+        var table=document.querySelector(".table")
+var info =document.querySelector(".btn2");
+
+console.log(table);
+console.log(info)
+console.log(td[0]);
+
+info.addEventListener("click",function(){
+    console.log("jkrehkjh");
+
+    table.classList.add("visible");
+    td[0].innerText=lat;
+    td[1].innerText=log;
+    td[2].innerHTML=new Date(time);
+
+
+})
+        }
+
+        
+      async function initMap(y,x) {
+        const { Map } = await google.maps.importLibrary("maps");
+
+        map = new Map(document.getElementById("map"), {
+          center: { lat: x, lng: y},
+          zoom: 16,
+        });
+      }
+ 
+   
+    </script>
+  </body>
+</html>
+
+
+
+  

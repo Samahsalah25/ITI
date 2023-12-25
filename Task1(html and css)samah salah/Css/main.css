@@ -1,0 +1,322 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+:root{
+    --darkpink:#d82a4e;
+    --lightgray:#EDF4F6;
+    --dark:#333333;
+}
+.navbarr{
+    height: 60px;
+    background-color: var(--dark);
+    position: fixed;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.logo{
+    height: 33px;
+    position: relative;
+    top: 10px;
+    left: 25px;
+}
+.btnnav{
+    position: absolute;
+    text-align: center;
+    color: rgb(208, 200, 200);
+    font-size: 16px;
+    position: absolute;
+    left: 180px;
+    height: 100%;
+    width: 160px;
+    background-color:rgb(15, 14, 14,0.4);
+    border: none;
+}
+.endnav{
+    position: absolute;
+    right: 0;
+}
+.btnnav2{
+    width: 70px;
+    height: 100%;
+    background-color: var(--dark);
+   
+}
+.Home{
+    width: 100%;
+    height: 980px;
+    background-image: url(../Images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed
+}
+.HomeNav{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    padding-top: 80px;
+}
+.pHome{
+    font-size: 38px;
+    padding: 0px;
+    position: relative;
+    left: -120px;
+    font-weight: bold;
+}
+.pspan{
+    color: var(--darkpink);
+}
+.homespan2{
+    position: relative;
+    left: -105px;
+    color: white;
+    opacity: 0.8;
+}
+ul{
+   
+    list-style: none;
+}
+li{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+li:hover{
+   color: var(--darkpink);
+}
+.btnlogin {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: var(--darkpink);
+    border: none;
+   margin-left: 80px;
+   cursor: pointer;
+}
+.details{
+    width: 870px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
+.detailslp1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.detailslp2{
+    padding-top: -20px;
+    padding-right: 10px;
+    font-size: 16px;
+}
+.home-form{
+    position: relative;
+    top: 190px;
+}
+.form-Home{
+   
+    width: 870px;
+    height: 144px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.Feature{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.featuredetails{
+    width: 870px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 70px;
+}
+.fdetailslp2{
+    padding-top: -20px;
+    padding-right: 10px;
+    font-size: 16px;
+    opacity: 0.5;
+
+}
+.ulnavfeature{
+   margin: auto;
+   position: relative;
+   top: 100px;
+}
+.ulnavfeature li{
+    font-weight: bold;
+}
+.search{
+    width: 1200px;
+    height: 341.6px;
+    background-color:var(--darkpink);
+    margin: auto;
+    margin-top: 200px;
+  
+  
+
+}
+.PSearch{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 60px;
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+    margin-bottom: 80px;
+
+}
+.form-seach{
+   
+    background-color: white;
+    width: 870px;
+    height: 144px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btnSecrh{
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: var(--darkpink);
+    border: none;
+}
+input{
+    width: 240px;
+    height: 50px;
+    border: none;
+    background-color: var(--lightgray);
+    font-size: 16px;
+    padding-left: 20px;
+}
+input:hover{
+    border-bottom:1px var(--darkpink) solid ;
+}
+.cards{
+   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   padding: 20px;
+    margin-top: 150px;
+   row-gap: 20px;
+  column-gap: 20px;
+}
+.detailcard{
+    display: grid;
+    grid-template-rows: 60% 40%;
+   height: 540px;
+   width: 100%;
+}
+.img1{
+    background-image: url("../Images/Featured Courses/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2{
+    background-image: url("../Images/Featured Courses/2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3{
+    background-image: url("../Images/Featured Courses/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img4{
+    background-image: url("../Images/Featured Courses/4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img5{
+    background-image: url("../Images/Featured Courses/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img6{
+    background-image: url("../Images/Featured Courses/6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img7{
+    background-image: url("../Images/Featured Courses/7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img8{
+    background-image: url("../Images/Featured Courses/8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pimge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:20px ;
+    margin-top: 25px;
+
+    height: 40px;
+    width: 80px;
+    background-color: var(--darkpink);
+    text-align: center;
+    color: white;
+
+}
+.tectcard{
+    padding: 20px;
+    background-color: var(--lightgray);
+}
+.numstu{
+    color: var(--darkpink);
+    font-size: 18px;
+    font-weight: bold;
+}
+.border{
+    border-top: 1px solid rgb(110, 95, 95);
+}
+.imgtext{
+    display: flex;
+    flex-direction: row;
+}
+.imageprofile img{
+   width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   
+}
+.imageprofile {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+} 
+.span3{
+    color: var(--darkpink);
+}
+.p2{
+    margin-left: 10px;
+}

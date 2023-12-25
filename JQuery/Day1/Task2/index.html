@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image:linear-gradient(to right, rgba(255,255,255, 0.5) 0 100%), url("/pexels-todd-trapani-2754200.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+        .section1{
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            align-items:center;
+       padding-top: 20px;
+            position: relative;
+            top: 150px;
+            background-color: rgb(240, 248, 255,0.5);
+        }
+        .divs{
+            display: flex;
+        }
+        .tab1, .tab2,.tab3,.tab4{
+            width: 70px;
+            height: 40px;
+            background-color: antiquewhite;
+            text-align: center;
+            align-self: center;
+          margin-left: 2px;
+          cursor: pointer;
+        }
+       
+        .contant{
+            height: 90px;
+            background-color: aqua;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+        }
+        .divs div.active{
+            background-color: rgb(232, 141, 23);
+        }
+    </style>
+</head>
+<body>
+    <div class="section1">
+        <div class="divs">
+            <div class="tab1 " >Tab1</div>
+            <div class="tab2 ">Tab1</div>
+            <div class="tab3 ">Tab1</div>
+            <div class="tab4 ">Tab1</div>
+        </div>
+        <div class="contant"></div>
+
+    </div>
+    
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

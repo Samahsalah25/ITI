@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            position: relative;
+            top: 300px;
+        }
+        img{display: inline;}
+        .img1{
+            position: absolute;
+            margin: 0;
+            width: 20%;
+            left: 20px;
+            top: -170px;
+            height: 290px;
+        }
+        .img2{
+            position: absolute;
+            margin: 0;
+            width: 100%;
+        }
+        .img3{
+            position: absolute;
+            margin: 0;
+            width: 20%;
+            right: 0;
+            top: -170px;
+            height: 290px;
+        }
+        .img4{
+            position: absolute;
+            margin: 0;
+            width: 7%;
+            left: 180px;
+            top: -35px;
+            height: 80px;
+
+            animation-name: ball;
+            animation-duration: 2s;
+            animation-delay: 0.2s;
+            animation-fill-mode: backwards;
+            transition: ease-in;
+            /* animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+            animation-direction:alternate;
+            animation-iteration-count: infinite;
+            transform: rotate(0deg);
+                /* -webkit-transform: rotate(0deg); */
+           
+        }
+        @keyframes ball {
+            0%{
+                transform: rotate( -180deg ) scale( 1.4 );
+                /* /* transform: rotate(270deg); */
+                -webkit-transform:  rotate( -180deg ) scale( 1.4 );
+                left: 180px;
+                top: -20px;
+                
+         
+            }
+            
+            100%{
+                transform: rotate( -360deg ) scale( 1 );
+                /* /* transform: rotate(270deg); */
+                -webkit-transform:  rotate( -360deg ) scale( 1 ); ; 
+                /* transform: rotate(270deg);
+                -webkit-transform: rotate(270deg); */
+                left: 990px;
+                top: 20px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+       <img class="img2" src="/grass.png"><img class="img4" src="/Black-Red_Egyptian_Soccer_ball.png"> <img class="img1" src="/player1.png"><img class="img3" src="/player2.png">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

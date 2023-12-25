@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      
+
+.slider {
+  width: 720px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+  .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+.buttons {
+  margin: 0;
+  width: 720px;
+  position: relative;
+  top: -40px;
+  margin: 0 auto;
+
+  .play {
+    display: none;
+  }
+
+  .btn {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- The wrapper for our slider -->
+        <div class="slider">
+          <ul class="slides">
+            <li class="slide"><img src="/pexels-lumn-399160.jpg" /></li>
+            <li class="slide"><img src="/pexels-photo-303383.jpeg" /></li>
+            <li class="slide"><img src="/pexels-photo-3972379.jpeg" /></li>
+            <li class="slide"><img src="/pexels-photo-585752.jpeg" /></li>
+            <li class="slide"><img src="/pexels-todd-trapani-2754200.jpg" /></li>
+
+          </ul>
+        </div>
+      
+        <div class="buttons">
+
+            <button type="button" class="btn btn-default pause">
+                <span class="glyphicon glyphicon-pause"></span>
+            </button>
+            <button type="button" class="btn btn-default play">
+                <span class="glyphicon glyphicon-play"></span>
+            </button>
+
+        </div>
+      
+      </div>
+      <script>
+        var animationSpeed = 1000; // How quickly the next slide animates.
+var pause = 3000; // The pause between each slide.
+var interval;
+function startSlider() {
+    $('.slides > li:first')
+  .fadeOut(animationSpeed)
+  .next()
+  .fadeIn(animationSpeed)
+  .end()
+  .appendTo('.slides');
+}
+$('.play').hide();
+$('.pause').click(function() {
+	clearInterval(interval);
+	$(this).hide();
+	$('.play').show();
+});
+interval = setInterval(function() {}, pause);
+
+      </script>
+</body>
+</html>

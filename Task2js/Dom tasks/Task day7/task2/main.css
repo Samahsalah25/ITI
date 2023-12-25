@@ -1,0 +1,11 @@
+.di{
+    width: 500px;
+    height: 300px ;
+    position: relative;
+
+}
+.di img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

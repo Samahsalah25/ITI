@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+        }
+.container div{
+    background-color: rgb(225, 225, 142);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.container div:hover{
+    background-color: rgb(221, 182, 182,0.3);
+
+}
+.posts{
+    background-color: rgb(7, 8, 8);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.posts div{
+    background-color: rgb(221, 182, 182,0.3);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    color: white;
+    font-size: 18px;
+    
+}
+h1{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <div class="posts">
+        <h1>Hello User choose name to select his posts</h1>
+
+    </div>
+    <script>
+
+$.ajax(
+    {
+        url:"https://jsonplaceholder.typicode.com/users",
+        method:"get",
+        success:function(e){
+            htmlStr = "";
+
+     for(let i=0;i<e.length;i++)
+     {  htmlStr += `<div class="${e[i].id}">${e[i].name}</div>`;
+          
+     }   
+     console.log( htmlStr)  
+     $(`.container`).html(htmlStr);
+        }
+    }
+)
+$(`.container`).on("click","div",function(e){
+
+    var className = $(this).attr('class');
+  
+    $.ajax(
+    {
+        url:"https://jsonplaceholder.typicode.com/posts?",
+        method:"get",
+        success:function(a){
+            htmlStr = "";
+
+    for(let i=0;i<a.length;i++)
+     {  
+        if (className==a[i].userId) {
+            htmlStr += `<div>${a[i].title}</div>`
+                    console.log(a[i].title);
+                  console.log("hello")
+                }
+       
+          
+      } 
+      $(`.posts`).html(htmlStr);
+    }})
+})
+
+    </script>
+</body>
+</html>

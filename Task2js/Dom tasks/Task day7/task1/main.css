@@ -1,0 +1,43 @@
+.form{
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    padding-left: 400px;
+
+}
+body{
+    background-color: bisque;
+}
+.d{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    border-color:bisque; ;
+}
+.reset{
+    border: none;
+    background-color:bisque;
+    width: 70px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+label{
+    font-size: 18px;
+
+}
+span{
+    color: red;
+}
+.hide{
+    display: none;
+}
+table{
+    border: 2px;
+    
+}

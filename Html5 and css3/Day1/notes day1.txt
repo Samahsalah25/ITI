@@ -1,0 +1,5 @@
+في حاجه عندي اسمها html5shiv بنستدعي اوقات جوا اسكريبت
+can i use  website use to y3rf element tags
+modernizr  لو البراوز مبيدعمش التاج دي بنقوله الفيرجن قديمه
+بحمل التاج بتقول ايه  فممكن من  الموقع دا اعمل  اللي قبله واختار build + download
+themefoeset (temoletes websites)

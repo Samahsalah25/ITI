@@ -1,0 +1,37 @@
+body{
+    box-sizing: border-box;
+}
+
+form{
+    text-align: center;
+    padding: 10px;
+}
+
+.progress{
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin: 20px;
+    background-image: linear-gradient(red, rgb(40, 40, 27), green);
+  
+   
+   
+}
+
+  progress::-webkit-progress-bar {
+  
+    background: linear-gradient(to right, rgba(33, 177, 89, .1), rgb(177, 134, 33));
+  
+  }
+  .span{
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+  }
+  label{
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+
+  }
+ 

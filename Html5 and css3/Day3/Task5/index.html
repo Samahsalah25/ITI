@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 200px;
+            height: 300px;
+            border: 3px solid red;
+            border-radius: 20px;
+            position: relative;
+            margin: auto;
+            top: 100px;
+        }
+        .A1{
+          font-size: 33px;
+          font-weight: bold;
+          position: absolute;
+          left: 7px;
+          top: 7px;
+         
+        }
+        .A2{
+          font-size: 33px;
+          font-weight: bold;
+          position: absolute;
+          
+          bottom: 9px;
+          right: 15px;
+
+        }
+        .h1{
+            position: relative;
+            text-align: center;
+            margin: auto;
+            top: 150px;
+            left: 85px;
+        }
+        .h2{
+            width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid black;
+          
+        }
+        .heart {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      transform: rotate(225deg);
+     top: -60px;
+    }
+    
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: 0;
+      left: -15.5px;
+    }
+
+    .heart::after {
+      top: -15.5px;
+      left: 0;
+    }    
+        
+    </style>
+</head>
+<body>
+    <div class="d1">
+      <div class="A1">A</div>
+        <div class="h1"><div class="h2"></div><div class="heart"></div></div>
+        <div class="A2">A</div>
+    </div>
+    <script>
+    //   var srt="Hello world";
+    //   var x=srt.split(" ");
+    //   var x1=x[0].split("").reverse().join("");
+    //   var x2=x[1].split("").reverse().join("");
+    //   console.log(x1);
+    //   console.log(x2)
+    //   var x3=x1+" "+x2;
+    //   console.log(x3);
+
+    //   //////////////////////
+    //   var y=[1,2,3,4,5];
+    //   var z=[5,7,8];
+    // //put put  [1,2,5,7,8]
+    // var u=y.slice(0,2).concat(z);
+    // console.log(u);
+    // var r=y.concat(y);
+    // console.log((r));
+    // let zero=0
+    // let count=3;
+    // let my=["Ahmed","Maxzero","Elham","Osama","Gamal","Amer"];
+    // // var m=my.slice(zero,++count).reverse();
+    // // console.log(m);
+    // // console.log(my.slice(++zero,count));
+    // var k=my[++zero];
+    // var l=(k).replace("Max","El")
+    // console.log(l);
+    // var x=l.slice(4).split("");
+    // var y=x[1].toUpperCase();
+    // var u=x[0].concat(y);
+    // console.log(u);
+    // var x=["C","D","X"];
+    // var y=["A","B","Z"];
+    // var z=(x.concat(y)).sort().reverse();
+    // console.log(z);
+    var1 = "12";
+// if (var2) {
+//   delete var2;
+// } else if (var1) {
+//   delete var1;
+// }
+// console.log(var1);
+// console.log(var2);
+
+function parent() {
+  function hoisted() {        return "I'm a function";    }
+  hoisted = "I'm a variable"; 
+  return hoisted(); 
+}console.log(parent());
+
+    
+   
+   
+    
+    
+    
+    
+    </script>
+</body>
+</html>

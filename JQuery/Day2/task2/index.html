@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+<!--    
+         /* body{
+        background-color: rgb(15, 10, 10);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider{
+        font-size: 35px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: -130px;
+      left: 450px;
+
+    }
+    .container{
+        width: 80%;
+        height: 400px;
+        background-color: rgb(240, 248, 255,0.5);
+        position: relative;
+        top: 100px;
+        left: -50px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .divimg1{
+        background-image: url("/pexels-lumn-399160.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25%;
+        border-radius: 10px;
+    }
+    .divimg2{
+        background-image: url("/pexels-photo-303383.jpeg");
+     
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25%;
+        border-radius: 10px;
+    }
+    .divimg3{
+        background-image: url("/pexels-photo-3972379.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25%;
+        border-radius: 10px;
+    }
+    .divimg4{
+        background-image: url("/pexels-photo-585752.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25%;
+        border-radius: 10px;
+    }
+    </style> -->
+</head>
+<!-- <body> -->
+    <!-- <div class="slider">Slider</div>
+    <div class="container">
+        <div class="divimg1"></div>
+        <div class="divimg2"></div>
+        <div class="divimg3"></div>
+        <div class="divimg4"></div>
+    </div>
+    <script>
+    //   $('.ontainer').bxSlider({
+    //             autoControls: true,
+    //             auto: true,
+    //             pager: true,
+    //             slideWidth: 600,
+    //             mode: 'fade',
+    //             captions: true,
+    //             speed: 1000
+    //         })
+    $(`.container div`).on("click",function(){
+     
+            
+    })
+    </script>
+</body> */ -->
+
+
+<body>
+
+<h2 class=" cursor" onclick="closeModal()" style="text-align:center">Slider</h2>
+
+<div class="row" style="display:flex">
+  <div class="column">
+    <img src="/pexels-lumn-399160.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="/pexels-photo-303383.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="/pexels-photo-3972379.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="/pexels-photo-585752.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="/pexels-lumn-399160.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="/pexels-photo-303383.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="/pexels-photo-3972379.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="/pexels-photo-585752.jpeg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div></div>
+    <!-- <div class="caption-container">
+      <p id="caption"></p>
+    </div> -->
+
+<!-- 
+    <div class="column">
+      <img class="demo cursor" src="/pexels-lumn-399160.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/pexels-photo-303383.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/pexels-photo-3972379.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/pexels-todd-trapani-2754200.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div> -->
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+
+// $('body').click(function(e){
+//     closeModal();
+//     e.stopPropagation();
+
+// });
+$('body').on('click',closeModal);
+
+
+</script>
+    
+</body>
+</html>

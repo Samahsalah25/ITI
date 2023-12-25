@@ -1,0 +1,48 @@
+.d1{
+    position: relative;
+    top: 300px;
+    left: 400px;
+    width: 600px;
+    height: 200px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.text{
+    width: 300px;
+    height: 40px;
+}
+.pass{
+    font-size: 20px;
+}
+
+/* .password
+{
+    display: inline-block;
+    position: relative;
+    border: 1px solid #000;
+    width:100%;
+    max-width:200px;
+}
+.password input
+{
+    padding: 10px 5px;
+    outline: none;
+    border: 0;
+    width:80%;
+    max-width:120px;
+}
+.pass-icon
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    cursor: pointer;
+}
+
+
+ */
